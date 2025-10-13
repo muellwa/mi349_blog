@@ -1,38 +1,54 @@
-<doctype! html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact</title>
+    <title>Contact - Walker's Blog</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-      <h1>Contact</h1>
-      <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Me</a> |
-        <a href="contact.html">Contact</a>
-      </nav>
-      <form name="contact" netlify>
-        <input type="hidden" name="form-name" value="contact">
-        <p>
-          <label>Name: <br><input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Email: <br><input type="email" name="email" /></label>
-        </p>
-        <p>
-          	<select id="inquiry-type" name="inquiry-type" required> 
-            <option value="" disabled selected>Reason for contact?</option>
-            <option value="general">Saying hi</option>
-            <option value="feedback">Looking for a contractor</option>
-            <option value="support">Interested in an interview</option>
-          	</select>
-        </p>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
-        <p>
-        	<button type="submit">Send</button>
-  		  </p>
-      </form>
+    <div class="page-container">
+      <header>
+        <h1>Contact</h1>
+        <nav class="main-nav">
+          <a href="index.html">Home</a> |
+          <a href="about.html">About Me</a> |
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <form name="contact" netlify class="contact-form">
+          <input type="hidden" name="form-name" value="contact">
+          
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+          </div>
+          
+          <div class="form-group">
+            <label for="inquiry-type">Reason for contact?</label>
+            <select id="inquiry-type" name="inquiry-type" required> 
+              <option value="" disabled selected>Select an option</option>
+              <option value="general">Saying hi</option>
+              <option value="feedback">Looking for a contractor</option>
+              <option value="support">Interested in an interview</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          
+          <button type="submit">Send</button>
+        </form>
+      </main>
+    </div>
   </body>
-</doctype>
+</html>
