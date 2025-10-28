@@ -40,13 +40,19 @@ nav {
     z-index: 100;
 }
 
-a {
+nav a {
     color: #BCABAE;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 16px;
+    border-right: 1px solid #BCABAE; 
 }
 
-a:hover {
+nav a:last-child {
+    border-right: none; 
+}
+
+nav a:hover {
     color: #716969;
     text-decoration: underline;
 }
@@ -142,16 +148,14 @@ time {
 }
 
 .contact-form {
-    width: 100;
+    width: 100%; 
     max-width: 800px;
 }
 
 .projects-list {
-    
     padding-left: 15px;
     margin-left: 170px;
     border-radius: 5px;
-    
 }
 
 .about-container {
@@ -173,7 +177,6 @@ input[type="email"] {
     flex-direction: column;
 }
 
-/* Mobile Phones (small screens) */
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -206,8 +209,14 @@ input[type="email"] {
     
     nav a {
         display: block;
-        margin: 5px 0;
-        padding: 8px;
+        margin: 0;
+        padding: 12px;
+        border-right: none;
+        border-bottom: 1px solid #BCABAE; 
+    }
+    
+    nav a:last-child {
+        border-bottom: none; 
     }
     
     .projects-list {
